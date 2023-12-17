@@ -1,3 +1,16 @@
+// "seed": "node -r dotenv/config ./scripts/seed.js"
+/**
+ * "node": This is the Node.js runtime executable.
+ * "-r dotenv/config": This part of the command uses the -r option to preload a module
+ * before the script execution. In this case, it preloads the dotenv/config module.
+ * The dotenv module is commonly used to load environment variables from a .env file
+ * into the process.env object. The -r option allows you to require a module before
+ * running the actual script, and in this case, it ensures that the .env file is loaded
+ * before the seed.js script runs.
+ * "./scripts/seed.js": This is the path to the JavaScript file that will be executed
+ * when the script is run. In this case, it's seed.js located in the scripts directory.
+ */
+
 const { db } = require('@vercel/postgres');
 const {
   invoices,
